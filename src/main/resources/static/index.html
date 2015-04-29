@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8"/>
+    <title>フォーマット変換forWEB</title>
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+        <form method="POST" enctype="multipart/form-data" action="/upload">
+                アップロードファイルの指定: <input type="file" name="file"><br />
+                主催企業コード: <input type="text" name="syusaikigyoucode">
+                    /tmp下の格納ディレクトリが決まります <br /><br />
+                データ種:<SELECT name="datashu">
+                               <OPTION value="dummy.xslt">データ種1</OPTION>
+                               <OPTION value="Consignment_ShipmentNotification.xsl">搬入予定伝票</OPTION>
+                               <OPTION value="DepartmentStore_CatalogueItem.xsl">商品マスタカタログ</OPTION>
+                               <OPTION value="Purchase_ReplenishmentProposal.xsl">納品提案</OPTION>
+                               <OPTION value="Purchase_ShipmentNotification.xsl">入荷予定伝票</OPTION>
+                         </SELECT>
+                    変換用xslt選択<br /><br />
+                ファイル名: <input type="text" name="name">
+                    保存用ファイル名
+                <br /> <br />
+                <input type="submit"value="Upload"> Uploadボタンを押してアップロードを開始します
+        </form>
+</body>
+</html>
+
